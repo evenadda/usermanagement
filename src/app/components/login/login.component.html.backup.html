@@ -1,0 +1,41 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="login-bg">
+    <!-- Main content -->
+    <section class="content">
+        <div class="login-box">
+            <div class="login-logo">
+              
+            </div>
+            <!-- /.login-logo -->
+            <div class="login-box-body">
+              <p class="login-box-msg">Welcome</p>
+          
+              <form>
+                <div class="form-group has-feedback">
+                  <input name="username" [(ngModel)]="mUsername" type="email" class="form-control" placeholder="Username">
+                  <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                  <input name="password" [(ngModel)]="mPassword" type="password" class="form-control" placeholder="Password">
+                  <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="row">
+                  <div class="col-xs-8">
+
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-xs-4">
+                    <button type="submit" (click)="onClickSubmit()" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                  </div>
+                  <!-- /.col -->
+                </div>
+              </form>
+
+          
+            </div>
+            <!-- /.login-box-body -->
+          </div>
+    </section>
+</div>
+
+  <!-- end Content Wrapper. Contains page content -->

@@ -1,0 +1,207 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" style="min-height: 792px;">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+          <h1>
+                  Project Name
+                  <!-- <small>#007612</small> -->
+              </h1>
+  </section>
+  <!-- <section class="content-header">
+      <div class="row">
+          <div class="col-md-12">        <h1>
+              
+          </h1></div>
+      </div>
+  </section> -->
+  <!-- Main content -->
+  <section class="content">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+            <div class="col-md-12">
+                              <!-- general form elements -->
+                              <div class="box box-info">
+                                  <div class="box-header with-border">
+                                      <h3 class="box-title"> <i class="glyphicon glyphicon-plus"></i> Add User</h3>
+                                    </div>
+                                    <!-- input box styling is bootstrap 3.3.7 -->
+                                  <!-- /.box-header -->
+                                    <!-- form start -->
+                                    <form class="form-horizontal">
+                                      <div class="box-body">
+                                              <div class="row">
+                                                      <div class="col-md-6">
+                                                              <div class="form-group">
+                                                                  <label for="inputEmail3" class="col-sm-4 control-label">Username</label>
+                                                                  <div class="col-sm-8">
+                                                                      <input type="text" class="form-control" id="inputEmail3" placeholder="Username" [(ngModel)]="userid" name="userid">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="form-group">
+                                                                  <label for="inputEmail3" class="col-sm-4 control-label">NameTh</label>
+                                                                  <div class="col-sm-8">
+                                                                      <input type="text" class="form-control" id="inputEmail3" placeholder="NameTh" [(ngModel)]="nameTh" name="nameTh">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="form-group">
+                                                                  <label for="inputEmail3" class="col-sm-4 control-label">Department</label>
+                                                                  <div class="col-sm-8">
+                                                                        <select class="form-control" name="deptId" [(ngModel)]="deptId">
+                                                                            <option [ngValue]="null">Choose a Department</option>
+                                                                            <option *ngFor="let itemD of departmentArray" [ngValue]="itemD.deptId">
+                                                                                {{ itemD.deptName }}
+                                                                            </option>
+                                                                        </select>
+                                                                  </div>
+                                                              </div>
+                                                              <div class="form-group">
+                                                                  <label for="inputEmail3" class="col-sm-4 control-label">Branch</label>
+                                                                  <div class="col-sm-8">
+                                                                          <select class="form-control" name="branchId" [(ngModel)]="branchId">
+                                                                                <option [ngValue]="null">Choose a Branch</option>
+                                                                                <option *ngFor="let itemB of branchArray" [ngValue]="itemB.branchId">
+                                                                                    {{ itemB.branchName }}
+                                                                                </option>
+                                                                          </select>
+                                                                  </div>
+                                                              </div>
+                                                              <div class="form-group">
+                                                                  <label for="inputEmail3" class="col-sm-4 control-label">Phone</label>
+                                                                  <div class="col-sm-8">
+                                                                      <input type="text" class="form-control" id="inputEmail3" placeholder="Phone" name="phone" [(ngModel)]="phone">
+                                                                  </div>
+                                                              </div>                                                                                   <div class="form-group">
+                                                                      <label for="inputEmail3" class="col-sm-4 control-label">Start Work Date</label>
+                                                                      <div class="col-sm-8">
+
+                                                                           
+                                                                          <div class="input-group">
+                                                                                <input type="text"  class="form-control" style="float:none" placeholder="Select a date" ngx-mydatepicker name="startdate" [(ngModel)]="startdate" [options]="myOptions" #dp="ngx-mydatepicker" (dateChanged)="onDateChanged($event)" (click)="dp.toggleCalendar()"/>
+                                                                              <div class="input-group-addon" (click)="dp.toggleCalendar()">
+                                                                                  <i class="fa fa-calendar"></i>
+                                                                              </div>
+                                                                          </div>
+                                                                              
+
+                                                                      </div>
+                                                                  </div>
+                                                                  <div class="form-group">
+                                                                      <label for="inputEmail3" class="col-sm-4 control-label">Facebook</label>
+                                                                      <div class="col-sm-8">
+                                                                          <input type="text" class="form-control" id="inputEmail3" placeholder="Facebook" name="facebook" [(ngModel)]="facebook">
+                                                                      </div>
+                                                                  </div>
+                                                                  <div class="form-group">
+                                                                      <label for="inputEmail3" class="col-sm-4 control-label">Status</label>
+                                                                      <div class="col-sm-8 radio">
+                                                                              <label>
+                                                                                  <input type="radio" id="optionsRadios1" value="Y" checked=""  name="activeFlag" [(ngModel)]="activeFlag">
+                                                                                  Active
+                                                                                  </label>
+                                                                                  <label>
+                                                                                  <input type="radio" id="optionsRadios2" value="N" name="activeFlag" [(ngModel)]="activeFlag">
+                                                                                  In Active
+                                                                              </label>
+                                                                      </div>
+                                                                  </div>                               
+                                                      </div>
+                                                      <!-- /.col -->
+                                                      <div class="col-md-6">
+                                                              <div class="form-group">
+                                                                      <label for="inputEmail3" class="col-sm-4 control-label">Email</label>
+                                                                      <div class="col-sm-8">
+                                                                          <input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="email" [(ngModel)]="email">
+                                                                      </div>
+                                                              </div>
+                                                                  <div class="form-group">
+                                                                          <label for="inputEmail3" class="col-sm-4 control-label">NameEn</label>
+                                                                          <div class="col-sm-8">
+                                                                              <input type="text" class="form-control" id="userNameEn" placeholder="NameEn" [(ngModel)]="userNameEn" name="userNameEn">
+                                                                          </div>
+                                                                  </div>
+                                                                  <div class="form-group">
+                                                                      <label for="inputEmail3" class="col-sm-4 control-label">Team</label>
+                                                                      <div class="col-sm-8">
+                                                                              <select class="form-control" name="teamId" [(ngModel)]="teamId">
+                                                                                    <option [ngValue]="null">Choose a Team</option>
+                                                                                    <option *ngFor="let itemT of teamArray" [ngValue]="itemT.teamId">
+                                                                                        {{ itemT.teamName }}
+                                                                                    </option>
+                                                                              </select>
+                                                                      </div>
+                                                                  </div> 
+                                                                  <div class="form-group">
+                                                                      <label for="inputEmail3" class="col-sm-4 control-label">Super User ID</label>
+                                                                      <div class="col-sm-8">
+                                                                          <input type="text" class="form-control" id="inputEmail3" placeholder="Super User ID" name="supUserId" [(ngModel)]="supUserId">
+                                                                      </div>
+                                                                  </div>
+                                                                  <div class="form-group">
+                                                                    <label for="inputEmail3" class="col-sm-4 control-label">User Group</label>
+                                                                    <div class="col-sm-8">
+                                                                        <select class="form-control" name="groupId" [(ngModel)]="groupId">
+                                                                            <option [ngValue]="null">Choose a Group</option>
+                                                                            <option *ngFor="let itemG of groupArray" [ngValue]="itemG.groupId">
+                                                                                {{ itemG.groupName }}
+                                                                            </option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>                                                                   
+                                                                  <div class="form-group">
+                                                                      <label for="inputEmail3" class="col-sm-4 control-label">Mobile</label>
+                                                                      <div class="col-sm-8">
+                                                                          <input type="text" class="form-control" id="inputEmail3" placeholder="Mobile" name="mobile" [(ngModel)]="mobile">
+                                                                      </div>
+                                                                  </div>
+                                                                  <div class="form-group">
+                                                                      <label for="inputEmail3" class="col-sm-4 control-label">Last Work Date</label>
+                                                                      <div class="col-sm-8">
+                                                                          <div class="input-group">
+                                                                              <input class="form-control" style="float:none" placeholder="Select a date" name="lastdate" ngx-mydatepicker #dp2="ngx-mydatepicker" [(ngModel)]="lastdate" [options]="myOptions2" (dateChanged)="onDateChanged2($event)" (click)="dp2.toggleCalendar()"/>
+                                                                              <div class="input-group-addon" (click)="dp.toggleCalendar()">
+                                                                                  <i class="fa fa-calendar"></i>
+                                                                              </div>
+                                                                          </div>
+
+                                                                      </div>
+                                                              </div>                                                     <div class="form-group">
+                                                                    <label for="inputEmail3" class="col-sm-4 control-label">Line</label>
+                                                                    <div class="col-sm-8">
+                                                                        <input type="text" class="form-control" id="inputEmail3" placeholder="Line" name="line" [(ngModel)]="line">
+                                                                    </div>
+                                                                </div>
+                                                                  <div class="form-group">
+                                                                      <label for="inputEmail3" class="col-sm-4 control-label">Remark</label>
+                                                                      <div class="col-sm-8">
+                                                                              <textarea class="form-control" rows="3" placeholder="Remark" name="remark" [(ngModel)]="remark"></textarea>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                      <!-- /.col -->
+                                                      </div>
+                                      </div>
+                                      <!-- /.box-body -->
+                                      <div class="box-footer" style="text-align:center;">
+                                        <button (click)="onAdd()" class="btn btn-primary">Save</button>
+                                        <button (click)="goBack()" class="btn btn-default">Cancel</button>
+                                      </div>
+                                      <!-- /.box-footer -->
+                                    </form>
+                                    <!-- form end -->
+
+
+                                </div>
+                              <!-- /.box -->
+            </div>
+
+
+            </div>
+      
+      
+          
+          
+      <!-- /.row (main row) -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

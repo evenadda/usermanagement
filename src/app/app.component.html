@@ -1,0 +1,23 @@
+<app-appheader *ngIf="router.url != '/login'"></app-appheader>
+<app-appmenu *ngIf="router.url != '/login'"></app-appmenu>
+<router-outlet></router-outlet>
+<app-appfooter *ngIf="router.url != '/login'"></app-appfooter> 
+<!-- <app-appheader></app-appheader>
+<app-appmenu></app-appmenu>
+<router-outlet></router-outlet>
+<app-appfooter></app-appfooter>  -->
+
+
+<!-- <app-appsetting></app-appsetting>
+<form>
+    <label for="name">Name</label>
+    <input type="text" [(ngModel)] ="name" name="name">
+    <label for="detail">Detail</label>
+    <input type="text" [(ngModel)] ="detail" name="detail">
+</form>
+<button (click)="onAdd()">Add</button>
+
+<h1>test</h1>
+<ul>
+    <li *ngFor="let item of result">{{ item.name }} <button (click)="onDelete(item.name)">X</button></li>
+</ul>-->

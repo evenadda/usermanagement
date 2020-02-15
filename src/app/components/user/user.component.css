@@ -1,0 +1,17 @@
+/* @import "~bootstrap/dist/css/bootstrap.css";
+@import "~datatables.net-bs4/css/dataTables.bootstrap4.css"; */
+.bold{
+    font-weight: bold;
+}
+.btn-group-sm>.btn, .btn-sm {
+    padding: 2px 4px;
+}
+.box-body{
+    padding-top: 5px;
+}
+.magin-bottom-5{
+    margin-bottom:5px;
+}
+#user_length{
+    display:none !important;
+}
