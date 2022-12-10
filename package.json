@@ -38,7 +38,7 @@
     "ngx-bootstrap": "^3.0.0",
     "ngx-mydatepicker": "^2.4.5",
     "node-rest-client": "^3.1.0",
-    "qs": "^6.5.2",
+    "qs": "^6.5.3",
     "querystring": "^0.2.0",
     "request": "^2.87.0",
     "requestify": "^0.2.5",
